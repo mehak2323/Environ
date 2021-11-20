@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Environ</string>
+    <string name="title_task">Tasks</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_posts">Post</string>
+    <string name="title_profile">Profile</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="profile_name">Joey</string>
+    <string name="profile_location">new york, usa</string>
+    <string name="profile_email">joey@gmail.com</string>
+    <string name="profile_about">Get started and start completing challenges to live a sustainable lifestyle</string>
+    <string name="profile_points">0</string>
+    <string name="profile_level">0</string>
+
+
+    <!-- Tasks Strings -->
+    <string-array name="tasks">
+        <item>Plant a tree</item>
+        <item>Make compost pit</item>
+        <item>Recycle bags</item>
+        <item>Skip shower today</item>
+        <item>Buy less plastic</item>
+        <item>Go vegan for a week</item>
+        <item>Sign a petition</item>
+        <item>Post on socials</item>
+        <item>Reduce fashion waste</item>
+        <item>Do carpooling</item>
+
+        <item>Plant a tree</item>
+        <item>Make compost pit</item>
+        <item>Recycle bags</item>
+        <item>Skip shower today</item>
+        <item>Buy less plastic</item>
+        <item>Go vegan for a week</item>
+        <item>Sign a petition</item>
+        <item>Post on socials</item>
+        <item>Reduce fashion waste</item>
+        <item>Do carpooling</item>
+    </string-array>
+
+</resources>
