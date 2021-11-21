@@ -8,7 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     
-    <!--Scheme 1, bigger pallete -->
+    <!--Scheme 1, bigger palette -->
     <color name="cobalt_turquoise">#277DA1</color>
     <color name="cerulean_blue">#577590</color>
     <color name="cool_grey">#4D908E</color>
@@ -20,7 +20,7 @@
     <color name="pale_vermilion">#F3722C</color>
     <color name="permanent_red">#F94144</color>
 
-    <!-- Scheme 2, smaller pallete -->
+    <!-- Scheme 2, smaller palette -->
     <color name="cool_grey_2">#264653</color>
     <color name="peacock_green">#2A9D8F</color>
     <color name="yellow_ochre_2">#E9C46A</color>

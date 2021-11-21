@@ -5,9 +5,55 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.environ.R
 
+class TaskListAdapter(private val items: ArrayList<String>):
+    RecyclerView.Adapter<TaskViewHolder>() {
+
+    //Below three functions needed/ suggested on default for adapter class
+    //1: called every time new view appears on screen. It returns a NewsViewHolder
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaskViewHolder {
+
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_task, parent, false)
+
+        return TaskViewHolder(view)
+    }
+    //2: binds data into the holder
+    override fun onBindViewHolder(holder: TaskViewHolder, @SuppressLint("RecyclerView") position: Int) {
+        val currentItem = items[position]
+        holder.titleView.text = currentItem
+
+        //On Click Listener for recycler view objects, if made in adapter
+        holder.itemView.setOnClickListener { v ->
+
+            //Fragment change
+            val activity = v!!.context as AppCompatActivity
+
+            val taskDescriptionFragment = TaskDescriptionFragment(position)
+            activity.supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment_task_main_view, taskDescriptionFragment)
+                .addToBackStack(null).commit()
+
+            //Toast.makeText(activity, "Task description will be added soon", Toast.LENGTH_LONG).show()
+        }
+
+    }
+    //3: called once to know total number of views
+    override fun getItemCount(): Int {
+        return items.size
+    }
+
+}
+
+//View Holder class
+class TaskViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+    val titleView: TextView = itemView.findViewById(R.id.item_task_title)
+}
+
+
+/*
 class TaskListAdapter(private val items: ArrayList<String>, private val listener: TaskItemClicked):
     RecyclerView.Adapter<TaskViewHolder>() {
 
@@ -33,18 +79,18 @@ class TaskListAdapter(private val items: ArrayList<String>, private val listener
         holder.titleView.text = currentItem
 
         //On Click Listener for recycler view objects, if made in adapter
-//        holder.itemView.setOnClickListener(object: View.OnClickListener{
-//
-//            override fun onClick(v: View?) {
-//                //Fragment change
-//                val activity= v!!.context as AppCompatActivity
-//
-//                val task2DescriptionFragment = Task2DescriptionFragment(position)
-//                activity.supportFragmentManager.beginTransaction().replace(R.id.rec, task2DescriptionFragment ).addToBackStack(null).commit()
-//
-//                Toast.makeText(activity, "Task description will be added soon", Toast.LENGTH_LONG).show()
-//            }
-//        })
+        holder.itemView.setOnClickListener { v ->
+
+            //Fragment change
+            val activity = v!!.context as AppCompatActivity
+
+            val taskDescriptionFragment = TaskDescriptionFragment(position)
+            activity.supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment_task_main_view, taskDescriptionFragment)
+                .addToBackStack(null).commit()
+
+            //Toast.makeText(activity, "Task description will be added soon", Toast.LENGTH_LONG).show()
+        }
 
     }
     //3: called once to know total number of views
@@ -63,3 +109,4 @@ class TaskViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
 interface TaskItemClicked{
     fun onItemClicked(item:String)
 }
+*/

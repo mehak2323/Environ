@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/grad"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_task_main_view"
     tools:context=".fragments.TaskFragment">
 
 
