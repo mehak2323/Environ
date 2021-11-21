@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/grad"
+        android:clickable="true"
         tools:context=".tasks.TaskDescriptionFragment">
 
         <TextView
@@ -47,6 +48,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/fragment_task_desc_task_num"
             app:layout_constraintRight_toRightOf="@+id/fragment_task_desc_task_num"
             android:src="@drawable/ic_share"
+
             />
 
 

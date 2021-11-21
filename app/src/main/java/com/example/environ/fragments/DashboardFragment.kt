@@ -1,15 +1,22 @@
 package com.example.environ.fragments
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.environ.R
+import androidx.browser.customtabs.CustomTabsIntent
+import com.example.environ.dashboard.NewsActivity
+import com.example.environ.dashboard.SortMeActivity
+import com.example.environ.databinding.FragmentDashboardBinding
+import kotlinx.android.synthetic.main.fragment_dashboard.*
 
 
 class DashboardFragment : Fragment() {
 
+    lateinit var dashboardBinding: FragmentDashboardBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,8 +27,36 @@ class DashboardFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_dashboard, container, false)
+
+        //Data binding part
+        dashboardBinding = FragmentDashboardBinding.inflate(inflater, container, false)
+        return dashboardBinding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        //Sort button
+        fragment_dashboard_sort_button.setOnClickListener {
+            val intentSort = Intent(activity, SortMeActivity::class.java)
+            startActivity(intentSort)
+        }
+
+        //News Button
+        fragment_dashboard_news_button.setOnClickListener {
+            val intentNews = Intent(activity, NewsActivity::class.java)
+            startActivity(intentNews)
+        }
+
+        //AQI Button
+        fragment_dashboard_aqi_button.setOnClickListener {
+
+            val url ="https://waqi.info/"
+            val builder = CustomTabsIntent.Builder()
+            val customTabsIntent = builder.build()
+            activity?.let { it1 -> customTabsIntent.launchUrl(it1, Uri.parse(url)) }
+        }
+
+
+    }
 }
