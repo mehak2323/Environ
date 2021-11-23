@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.example.environ.databinding.FragmentTaskDescriptionBinding
 import kotlinx.android.synthetic.main.fragment_task_description.*
 
@@ -49,6 +50,12 @@ class TaskDescriptionFragment(private val position: Int) : Fragment(), DataTaskD
         //Back button listener
         fragment_task_desc_back.setOnClickListener {
             fragmentManager?.popBackStack()
+        }
+
+        fragment_task_desc_completed_button.setOnClickListener {
+            Toast.makeText(activity,
+                "Thank You for completing this task! Your points are added in your profile. We appreciate your honesty."
+                ,Toast.LENGTH_LONG).show()
         }
     }
 

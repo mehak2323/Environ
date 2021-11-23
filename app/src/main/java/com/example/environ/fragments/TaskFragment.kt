@@ -10,11 +10,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.environ.R
+import com.example.environ.tasks.DataTaskDescription
 //import com.example.environ.tasks.TaskDescriptionFragment
 
 import com.example.environ.tasks.TaskListAdapter
 
-class TaskFragment : Fragment() {
+class TaskFragment : Fragment(), DataTaskDescription {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,7 +40,7 @@ class TaskFragment : Fragment() {
             recyclerView.layoutManager = LinearLayoutManager(activity)
         }
         //define adapter and pass list of strings to it
-        val items = fetchData()
+        val items = getTitleList()
         val adapter = TaskListAdapter(items)
         //Add adapter to recyclerView
         if (recyclerView != null) {
@@ -49,12 +50,12 @@ class TaskFragment : Fragment() {
 
     }
 
-    //List of tasks text to be displayed
-    private fun fetchData(): ArrayList<String> {
-        val list = ArrayList<String>()
-        list += resources.getStringArray(R.array.tasks)
-        return list
-    }
+    //List of tasks text to be displayed , NO more valid
+//    private fun fetchData(): ArrayList<String> {
+//        val list = ArrayList<String>()
+//        list += resources.getStringArray(R.array.tasks)
+//        return list
+//    }
 
 }
 

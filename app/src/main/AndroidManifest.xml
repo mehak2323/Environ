@@ -12,13 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Environ">
         <activity
-            android:name=".dashboard.NewsActivity"
+            android:name=".CreatePostActivity"
             android:exported="false" />
         <activity
-            android:name=".dashboard.SortMeActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
+            android:name=".SignInActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,6 +23,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".profile.SettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".dashboard.NewsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".dashboard.SortMeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

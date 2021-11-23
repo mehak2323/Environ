@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.environ.R
 
-class TaskListAdapter(private val items: ArrayList<String>):
+class TaskListAdapter(private val items: List<String>):
     RecyclerView.Adapter<TaskViewHolder>() {
 
     //Below three functions needed/ suggested on default for adapter class

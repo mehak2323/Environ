@@ -27,8 +27,8 @@
                 android:background="@drawable/circle_border">
 
                 <ImageView
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
                     android:layout_margin="9dp"
                     android:adjustViewBounds="true"
                     android:background="@drawable/circle"
@@ -48,7 +48,7 @@
                 android:fontFamily="sans-serif-light"
                 android:text="@string/profile_name"
                 android:textColor="@color/white"
-                android:textSize="32sp" />
+                android:textSize="30sp" />
 
 
             <TextView
@@ -64,6 +64,7 @@
                 android:textSize="14sp" />
 
             <ImageView
+                android:id="@+id/profile_settings"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_alignParentRight="true"
@@ -72,6 +73,17 @@
                 android:adjustViewBounds="true"
                 android:scaleType="centerInside"
                 android:src="@drawable/ic_settings" />
+
+            <ImageView
+                android:id="@+id/profile_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/ic_edit"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                />
+
 
         </RelativeLayout>
 

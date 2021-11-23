@@ -50,11 +50,18 @@ class DashboardFragment : Fragment() {
 
         //AQI Button
         fragment_dashboard_aqi_button.setOnClickListener {
-
-            val url ="https://waqi.info/"
+            val aqiUrl ="https://waqi.info/"
             val builder = CustomTabsIntent.Builder()
             val customTabsIntent = builder.build()
-            activity?.let { it1 -> customTabsIntent.launchUrl(it1, Uri.parse(url)) }
+            activity?.let { it1 -> customTabsIntent.launchUrl(it1, Uri.parse(aqiUrl)) }
+        }
+
+        //Petition button
+        fragment_dashboard_petition_button.setOnClickListener {
+            val petitionUrl = "https://www.change.org/t/environment-18?source_location=homepage"
+            val builder = CustomTabsIntent.Builder()
+            val customTabsIntent = builder.build()
+            activity?.let { it1 -> customTabsIntent.launchUrl(it1, Uri.parse(petitionUrl)) }
         }
 
 
