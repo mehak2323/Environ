@@ -64,6 +64,21 @@ class DashboardFragment : Fragment() {
             activity?.let { it1 -> customTabsIntent.launchUrl(it1, Uri.parse(petitionUrl)) }
         }
 
+        //Movie/Documentary button
+        fragment_dashboard_movie_button.setOnClickListener {
+            val movieUrl = "https://en.wikipedia.org/wiki/List_of_environmental_films"
+            val builder = CustomTabsIntent.Builder()
+            val customTabsIntent = builder.build()
+            activity?.let { it1 -> customTabsIntent.launchUrl(it1, Uri.parse(movieUrl)) }
+        }
+
+        //List of organizations button
+        fragment_dashboard_organization_button.setOnClickListener {
+            val organizationUrl = "https://en.wikipedia.org/wiki/List_of_environmental_organizations"
+            val builder = CustomTabsIntent.Builder()
+            val customTabsIntent = builder.build()
+            activity?.let { it1 -> customTabsIntent.launchUrl(it1, Uri.parse(organizationUrl)) }
+        }
 
     }
 }

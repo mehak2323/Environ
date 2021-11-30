@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Environ">
         <activity
+            android:name=".profile.EditProfileActivity"
+            android:exported="false" />
+        <activity
             android:name=".CreatePostActivity"
             android:exported="false" />
         <activity
@@ -23,7 +26,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".profile.SettingsActivity"
             android:exported="false" />
@@ -32,7 +34,8 @@
             android:exported="false" />
         <activity
             android:name=".dashboard.SortMeActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".MainActivity"
             android:exported="true"

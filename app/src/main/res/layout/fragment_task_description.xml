@@ -79,6 +79,20 @@
             android:textSize="20sp"
             />
 
+        <TextView
+            android:id="@+id/fragment_task_desc_points"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/fragment_task_desc_completed_button"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:text="Points earned: "
+            android:layout_margin="10dp"
+            android:padding="5dp"
+            android:textSize="20sp"
+            android:textColor="@color/cool_grey_2"
+            />
+
         <Button
             android:id="@+id/fragment_task_desc_completed_button"
             android:layout_width="match_parent"

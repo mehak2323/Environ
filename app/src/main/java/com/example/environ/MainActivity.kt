@@ -22,11 +22,13 @@ class MainActivity : AppCompatActivity() {
     private val dashboardFragment = DashboardFragment()
     private val postFragment = PostFragment()
 
+
     //private lateinit var mainBinding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
 
         //Navigation bottom nav..
 
@@ -59,6 +61,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+
     //Bottom Nav helper function
     private fun replaceFragment(fragment: Fragment){
         if(fragment!=null){
@@ -67,4 +70,5 @@ class MainActivity : AppCompatActivity() {
             transaction.commit()
         }
     }
+
 }

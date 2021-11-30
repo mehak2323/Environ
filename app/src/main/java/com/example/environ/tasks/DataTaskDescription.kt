@@ -13,7 +13,7 @@ interface DataTaskDescription {
             4 -> "Go Vegan for a week"
             5 -> "Recycle Bags"
             6 -> "Buy less plastic"
-            7 -> "Make compost pit"
+            7 -> "Watch a documentary or a film"
             8 -> "Buy fair trade products"
             9 -> "Use eco-friendly cleaning products"
             10 -> "Post on socials"
@@ -26,6 +26,8 @@ interface DataTaskDescription {
             17 -> "Donate unused items"
             18 -> "Go Hiking"
             19 -> "Grow your own produce"
+            20 -> "Make compost pit"
+            21 -> "Volunteer for an organization"
             else -> {
                 "Task title not added yet."
             }
@@ -43,7 +45,7 @@ interface DataTaskDescription {
             4 -> "The production of meat is one of the biggest contributors to climate change and the pollution of landscapes and waterways. By going on a vegan diet, you can help to reduce the impact the meat industry has on the Earth."
             5 -> "Use cloth or jute bags when you go grocery shopping as it will help reduce plastic contamination."
             6 -> "Single-use products, particularly plastic ones, tend to end up in landfill and the ocean, causing harm to wildlife and the environment. Prevent this by choosing to use reusable and eco-friendly alternatives instead."
-            7 -> "If you have leftovers, don’t throw them away. Save them for your lunch or tea the next day, or even freeze them. However, if they do go off, use them to create compost for you garden."
+            7 -> "The best way to get informed is to see a environmental documentary or a movie. Watch one today and earn your score. You can check the list in the dashboard tab."
             8 -> "When a product has been Fairtrade certified it means it has been produced by a company committed to sustainable production. Keep an eye out for the Fairtrade mark on the packaging of products you buy."
             9 -> "Some cleaning products contain chemicals that can be harmful to the environment. By committing to using green/eco-friendly cleaning products, you can help to prevent these chemicals from having a negative impact on the Earth."
             10 -> "Make a posts or create a campaign on your preferred social media for sustainable awareness. Get your friends excited and guide them on the road of sustainability."
@@ -57,6 +59,8 @@ interface DataTaskDescription {
             17 -> "If you don’t use a product or wear a piece of clothing anymore, give it to a charity shop or someone you know would make use of it to help reduce waste."
             18 -> "Getting into nature is easy with nothing more than your refillable water bottle and a good pair of shoes. So, go for a hike and take advantage of the forest canopy, rippling water and scenery that nature provides while getting in your steps."
             19 -> "By growing your own fruit and vegetables, you can ensure you’re not using pesticides that will contribute to water and air pollution. This will also help to reduce the amount fossil fuels used to transport produce to supermarkets."
+            20 -> "If you have leftovers, don’t throw them away. Save them for your lunch or tea the next day, or even freeze them. However, if they do go off, use them to create compost for you garden."
+            21 -> "Sign up as a volunteer in an organization of your choice to work with like minded people and make real impact! A list of organizations is given in dashboard tab, check out their websites and apply for newsletters or volunteering if applicable."
             else -> {
                 "Task description not added yet"
             }
@@ -75,10 +79,10 @@ interface DataTaskDescription {
             4 -> 10
             5 -> 5
             6 -> 7
-            7 -> 20
+            7 -> 4
             8 -> 20
             9 -> 15
-            10 -> 3
+            10 -> 4
             11 -> 5
             12 -> 3
             13 -> 5
@@ -88,6 +92,8 @@ interface DataTaskDescription {
             17 -> 10
             18 -> 10
             19 -> 25
+            20 -> 20
+            21 -> 20
             else -> {
                 0
             }
@@ -103,7 +109,7 @@ interface DataTaskDescription {
             "Go Vegan for a week",
             "Recycle Bags",
             "Buy less plastic",
-            "Make compost pit",
+            "Watch a documentary or a film",
             "Buy fair trade products",
             "Use eco-friendly cleaning products",
             "Post on socials",
@@ -115,7 +121,9 @@ interface DataTaskDescription {
             "Reduce fashion waste",
             "Donate unused items",
             "Go Hiking",
-            "Grow your own produce"
+            "Grow your own produce",
+            "Make compost pit",
+            "Volunteer for an organization"
         )
     }
 

@@ -9,15 +9,18 @@
     <string name="profile_name">Joey</string>
     <string name="profile_location">new york, usa</string>
     <string name="profile_email">joey@gmail.com</string>
-    <string name="profile_about">Get started and start completing challenges to live a sustainable lifestyle</string>
+    <string name="profile_about">Get started and start completing challenges to live a sustainable lifestyle.</string>
     <string name="profile_points">0</string>
     <string name="profile_level">0</string>
     <string name="sorter_text">
         Recyclable: cardboard, paper, trash (Green bin) \nNonRecyclable: glass, metal, plastic (Blue bin) \n\nNote: Do not click on classify before selecting an image. This is just a fun thing to raise awareness about sorting waste in separate bins and may not be accurate.
     </string>
+    <string name="edit_note">
+        Note: Your name and image are taken from your google account and will not be edited.\nYour points, location and about are currently saved locally. We will add points to your google profile in future updates.
+    </string>
 
 
-    <!-- Tasks Strings -->
+    <!-- Tasks Strings
     <string-array name="tasks">
         <item>Plant a tree</item>
         <item>Make compost pit</item>
@@ -41,5 +44,6 @@
         <item>Reduce fashion waste</item>
         <item>Do carpooling</item>
     </string-array>
+    -->
 
 </resources>
